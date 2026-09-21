@@ -1,0 +1,6 @@
+{
+  "name": "CyberMentor",
+  "description": "Server-authoritative cybersecurity learning platform with adaptive AI mentorship, CTF labs, incident scenarios, and certification preparation.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

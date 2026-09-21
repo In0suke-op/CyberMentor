@@ -1,0 +1,83 @@
+{
+  "entities": {
+    "users": {
+      "title": "User Profile",
+      "description": "User profile data including XP, streak, and tier",
+      "type": "object",
+      "properties": {
+        "email": { "type": "string" },
+        "username": { "type": "string" },
+        "fullName": { "type": "string" },
+        "role": { "type": "string" },
+        "xp": { "type": "number" },
+        "level": { "type": "number" },
+        "dailyStreak": { "type": "number" },
+        "lastActiveDate": { "type": "string" },
+        "skillTier": { "type": "string" },
+        "createdAt": { "type": "string" }
+      },
+      "required": ["email", "username", "xp", "level"]
+    },
+    "notes": {
+      "title": "Student Note",
+      "description": "Notes saved by cybersecurity students",
+      "type": "object",
+      "properties": {
+        "userId": { "type": "string" },
+        "title": { "type": "string" },
+        "content": { "type": "string" },
+        "tags": { "type": "array", "items": { "type": "string" } },
+        "lessonId": { "type": "string" },
+        "labId": { "type": "string" },
+        "scenarioId": { "type": "string" },
+        "createdAt": { "type": "string" },
+        "updatedAt": { "type": "string" }
+      },
+      "required": ["userId", "title", "content"]
+    },
+    "userBadges": {
+      "title": "User Badge",
+      "description": "Earned badges and achievements",
+      "type": "object",
+      "properties": {
+        "userId": { "type": "string" },
+        "badgeId": { "type": "string" },
+        "title": { "type": "string" },
+        "description": { "type": "string" },
+        "icon": { "type": "string" },
+        "category": { "type": "string" },
+        "earnedAt": { "type": "string" }
+      },
+      "required": ["userId", "badgeId"]
+    },
+    "userProgress": {
+      "title": "User Progress",
+      "description": "Lesson, lab, quiz, and scenario progress entries",
+      "type": "object",
+      "properties": {
+        "userId": { "type": "string" },
+        "itemType": { "type": "string" },
+        "itemId": { "type": "string" },
+        "completed": { "type": "boolean" },
+        "score": { "type": "number" },
+        "xpEarned": { "type": "number" },
+        "completedAt": { "type": "string" }
+      },
+      "required": ["userId", "itemType", "itemId"]
+    },
+    "chatSessions": {
+      "title": "Chat Session",
+      "description": "Persistent student conversation sessions with the Socratic CyberMentor",
+      "type": "object",
+      "properties": {
+        "userId": { "type": "string" },
+        "title": { "type": "string" },
+        "mode": { "type": "string" },
+        "messages": { "type": "array" },
+        "createdAt": { "type": "string" },
+        "updatedAt": { "type": "string" }
+      },
+      "required": ["userId", "title", "messages"]
+    }
+  }
+}
